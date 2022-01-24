@@ -27,8 +27,6 @@ function TreasuryDashboard() {
   const verySmallScreen = useMediaQuery("(max-width: 379px)");
 
   const staked = useSelector(state => {
-    console.log('---------');
-    console.log(state);
     return state.app.Staked;
   });
   const treasuryMarketValue = useSelector(state => {

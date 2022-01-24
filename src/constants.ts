@@ -1,8 +1,8 @@
 export const THE_GRAPH_URL = "http://localhost:8000/subgraphs/name/Factory";
-export const EPOCH_INTERVAL = 9600;
+export const EPOCH_INTERVAL = 7200;
 
 // NOTE could get this from an outside source since it changes slightly over time
-export const BLOCK_RATE_SECONDS = 3;
+export const BLOCK_RATE_SECONDS = 1;
 
 export const TOKEN_DECIMALS = 9;
 

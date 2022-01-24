@@ -29,10 +29,10 @@ export default function Social() {
     //   </Link>
     // </div>
     <div className="social-row " >
-      <a href="https://twitter.com/PIDAOFinance" target="_blank" className="bottomImgs" style={{marginLeft:5,marginRight:15}}><img src={img1_1} alt="" className="bottomImgs2" style={{width:30,height:30}}/></a>
-      <a href="https://github.com/PIDAOFinance" target="_blank" className="bottomImgs" style={{marginLeft:15,marginRight:15}}><img src={img1_2} alt="" className="bottomImgs2" style={{width:30,height:30}}/></a>
-      <a href="https://medium.com/@PIDAOFinance" target="_blank" className="bottomImgs" style={{marginLeft:15,marginRight:15}}><img src={medium} alt="" className="bottomImgs2" style={{width:30,height:30}}/></a>
-      <a href="https://t.me/PIDAOfinance" target="_blank" className="bottomImgs" style={{marginLeft:15,marginRight:15}}><img src={img1_4} alt="" className="bottomImgs2" style={{width:30,height:30}}/></a>
+      <a href="https://twitter.com" target="_blank" className="bottomImgs" style={{marginLeft:5,marginRight:15}}><img src={img1_1} alt="" className="bottomImgs2" style={{width:30,height:30}}/></a>
+      <a href="https://github.com" target="_blank" className="bottomImgs" style={{marginLeft:15,marginRight:15}}><img src={img1_2} alt="" className="bottomImgs2" style={{width:30,height:30}}/></a>
+      <a href="https://medium.com" target="_blank" className="bottomImgs" style={{marginLeft:15,marginRight:15}}><img src={medium} alt="" className="bottomImgs2" style={{width:30,height:30}}/></a>
+      <a href="https://t.me" target="_blank" className="bottomImgs" style={{marginLeft:15,marginRight:15}}><img src={img1_4} alt="" className="bottomImgs2" style={{width:30,height:30}}/></a>
     </div>
   );
 }

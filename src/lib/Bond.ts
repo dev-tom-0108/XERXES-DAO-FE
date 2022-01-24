@@ -71,7 +71,7 @@ export abstract class Bond {
     const bondAddress = this.getAddressForBond(networkID);
     return new ethers.Contract(bondAddress, this.bondContractABI, provider);
   }
-
+  
   getAddressForReserve(networkID: NetworkID) {
     const bond = this.networkAddrs[networkID];
     return this.networkAddrs[networkID].reserveAddress;

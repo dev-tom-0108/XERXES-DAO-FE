@@ -86,7 +86,6 @@ function Stake() {
   });
 
   const pendingTransactions = useSelector(state => {
-    console.log(state, "111111111111111");
     return state.pendingTransactions;
   });
 

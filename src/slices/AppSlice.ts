@@ -78,8 +78,7 @@ export const loadAppDetails = createAsyncThunk(
         stakingTVL: 0,
         marketPrice,
         marketCap: 0,
-        circSupply: 0,
-        
+        circSupply: 0,        
         totalSupply: 0,
         treasuryMarketValue: 0,
       };
