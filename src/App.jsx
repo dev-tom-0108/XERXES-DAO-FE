@@ -183,16 +183,6 @@ function App() {
   useEffect(() => {
     themeMode = theme === "light" ? lightTheme : darkTheme;
   }, [theme]);
-  
-  useEffect(() => {
-    const updateAppDetailsInterval = setInterval(() => {
-      dispatch(loadAppDetails({ networkID: chainID, provider }));
-      populateGlobalBondInfo();
-    }, 1000 * 120);
-    return () => {
-      clearInterval(updateAppDetailsInterval);
-    };
-  }, []);
 
   useEffect(() => {
     if (isSidebarExpanded) handleSidebarClose();

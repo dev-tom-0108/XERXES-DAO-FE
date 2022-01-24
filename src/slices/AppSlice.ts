@@ -2,7 +2,7 @@ import { ethers } from "ethers";
 import { addresses } from "../constants";
 import { abi as OlympusStaking } from "../abi/OlympusStaking.json";
 import { abi as OlympusStakingv2 } from "../abi/OlympusStakingv2.json";
-import { abi as sOHM } from "../abi/sOHM.json";
+import { abi as ierc20abi } from "../abi/IERC20.json";
 import { abi as sOHMv2 } from "../abi/sOhmv2.json";
 import { setAll, getTokenPrice, getMarketPrice, getDisplayBalance } from "../helpers";
 import { NodeHelper } from "../helpers/NodeHelper";
@@ -85,7 +85,7 @@ export const loadAppDetails = createAsyncThunk(
       };
     }
     const currentBlock = await provider.getBlockNumber();
-
+    
     const stakingContract = new ethers.Contract(
       addresses[networkID].STAKING_ADDRESS as string,
       OlympusStakingv2,
@@ -97,25 +97,25 @@ export const loadAppDetails = createAsyncThunk(
     //   OlympusStaking,
     //   provider,
     // );
-    const sohmMainContract = new ethers.Contract(addresses[networkID].SPID_ADDRESS as string, sOHMv2, provider);
-    const ohmMainContract = new ethers.Contract(addresses[networkID].PID_ADDRESS as string, sOHMv2, provider);
+    const sohmMainContract = new ethers.Contract(addresses[networkID].SPID_ADDRESS as string, sOHMv2, provider); 
+    const ohmMainContract = new ethers.Contract(addresses[networkID].PID_ADDRESS as string, ierc20abi, provider);
     const DistributorContract = new ethers.Contract(addresses[networkID].DISTRIBUTOR_ADDRESS as string, DistributorContractAbi, provider);
     // const sohmOldContract = new ethers.Contract(addresses[networkID].OLD_SPID_ADDRESS as string, sOHM, provider);
-
+    
     const endBlock = (await DistributorContract.nextEpochBlock()).toNumber()
     const totalSupply = Number(getDisplayBalance(await ohmMainContract.totalSupply(), 9));
-
-
+    
+    
     // Calculating staking
     const epoch = await stakingContract.epoch();
     const stakingReward = epoch.distribute;
     const circ = await sohmMainContract.circulatingSupply();
     const stakingRebase = stakingReward / circ;
     
-
+    
     const fiveDayRate = Math.pow(1 + stakingRebase, 5 * 12) - 1;
     const stakingAPY = Math.pow(1 + stakingRebase, 365 * 12) - 1;
-
+    
     // Current index
     const currentIndex = await stakingContract.index();
 
