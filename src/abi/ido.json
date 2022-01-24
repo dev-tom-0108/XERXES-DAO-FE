@@ -1,0 +1,321 @@
+[
+	{
+	  "inputs": [],
+	  "name": "airdrop",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "buy",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+	    {
+	      "internalType": "uint256",
+	      "name": "_totalAmount",
+	      "type": "uint256"
+	    },
+	    {
+	      "internalType": "address",
+	      "name": "_BUSD",
+	      "type": "address"
+	    }
+	  ],
+	  "stateMutability": "nonpayable",
+	  "type": "constructor"
+	},
+	{
+	  "anonymous": false,
+	  "inputs": [
+	    {
+	      "indexed": true,
+	      "internalType": "address",
+	      "name": "previousOwner",
+	      "type": "address"
+	    },
+	    {
+	      "indexed": true,
+	      "internalType": "address",
+	      "name": "newOwner",
+	      "type": "address"
+	    }
+	  ],
+	  "name": "OwnershipPulled",
+	  "type": "event"
+	},
+	{
+	  "anonymous": false,
+	  "inputs": [
+	    {
+	      "indexed": true,
+	      "internalType": "address",
+	      "name": "previousOwner",
+	      "type": "address"
+	    },
+	    {
+	      "indexed": true,
+	      "internalType": "address",
+	      "name": "newOwner",
+	      "type": "address"
+	    }
+	  ],
+	  "name": "OwnershipPushed",
+	  "type": "event"
+	},
+	{
+	  "inputs": [],
+	  "name": "pullManagement",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+	    {
+	      "internalType": "address",
+	      "name": "newOwner_",
+	      "type": "address"
+	    }
+	  ],
+	  "name": "pushManagement",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "renounceManagement",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+	    {
+	      "internalType": "bool",
+	      "name": "_open",
+	      "type": "bool"
+	    }
+	  ],
+	  "name": "setOpen",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+	    {
+	      "internalType": "address",
+	      "name": "_pid",
+	      "type": "address"
+	    }
+	  ],
+	  "name": "setPID",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+	    {
+	      "internalType": "uint256",
+	      "name": "_newTotalAmount",
+	      "type": "uint256"
+	    }
+	  ],
+	  "name": "setTotalAmount",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+	    {
+	      "internalType": "address[]",
+	      "name": "_user",
+	      "type": "address[]"
+	    },
+	    {
+	      "internalType": "uint256[]",
+	      "name": "_amount",
+	      "type": "uint256[]"
+	    }
+	  ],
+	  "name": "setWhitelist",
+	  "outputs": [],
+	  "stateMutability": "nonpayable",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "BUSD",
+	  "outputs": [
+	    {
+	      "internalType": "address",
+	      "name": "",
+	      "type": "address"
+	    }
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+	    {
+	      "internalType": "address",
+	      "name": "_addr",
+	      "type": "address"
+	    }
+	  ],
+	  "name": "getBusdAmount",
+	  "outputs": [
+	    {
+	      "internalType": "uint256",
+	      "name": "",
+	      "type": "uint256"
+	    }
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "IsOpen",
+	  "outputs": [
+	    {
+	      "internalType": "bool",
+	      "name": "",
+	      "type": "bool"
+	    }
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	},
+	{
+	  "inputs": [
+	    {
+	      "internalType": "address",
+	      "name": "",
+	      "type": "address"
+	    }
+	  ],
+	  "name": "IsPay",
+	  "outputs": [
+	    {
+	      "internalType": "bool",
+	      "name": "",
+	      "type": "bool"
+	    }
+	  ],
+	  "stateMutability": "view",
+	  "type": "function"
+	},
+	{
+	  "inputs": [],
+	  "name": "manager",
+	  "outputs": [
+	    {
+		    "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "PID",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "Price",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "QuantityIssued",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "TotalAmount",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "Users",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "Whitelist",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

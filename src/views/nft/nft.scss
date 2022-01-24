@@ -1,0 +1,364 @@
+#pool-together-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: visible;
+
+  .award-buttons button {
+    margin: 5px !important;
+  }
+
+  .pool-prize-card {
+    .vegas-container {
+      max-height: 240px;
+      height: 100%;
+      max-width: 833px;
+      width: 97%;
+      margin-bottom: -15px;
+      margin-top: -10px;
+      z-index: 2;
+      position: sticky;
+    }
+
+    .vegas {
+      width: 100%;
+      max-height: 250px;
+      // height: 230px;
+      min-height: 150px;
+      background-image: url("../../assets/images/33-together-spritesheet.png");
+      animation: sprite 3.33s steps(7) infinite;
+      background-size: 700%;
+      background-repeat: repeat-x;
+    }
+
+    .pool-timer {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 5px;
+      .pool-timer-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 3.3rem;
+      }
+    }
+  }
+
+  .pt-tabs {
+    margin-bottom: 15px;
+  }
+
+  .pool-tab > div {
+    padding: 0;
+  }
+}
+
+.pool-deposit-ui {
+  width: 100%;
+
+  .deposit-container,
+  .withdrawal-container {
+    width: 100%;
+  }
+}
+
+.light .vegas {
+  filter: invert(0.99);
+}
+
+// Mobile styles
+:not(.tablet, .mobile) .vegas {
+  height: 240px;
+}
+
+:not(.mobile) .pool-deposit-button,
+.pool-start-award-button,
+.pool-complete-award-button {
+  width: 200px;
+  min-width: 200px;
+}
+
+.mobile .pool-deposit-button,
+.mobile .pool-withdraw-button {
+  max-width: 100% !important;
+  width: 100%;
+}
+
+.tablet .vegas {
+  height: 190px;
+  margin-bottom: -10px;
+}
+
+.mobile .vegas {
+  height: 160px !important;
+  margin-bottom: -18px;
+}
+
+@keyframes sprite {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: -700%;
+  }
+}
+
+.maxTopBox{
+  padding: 0 77px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media(max-width: 1000px){
+    display: none;
+  }
+}
+.maxTopBoxYD{
+  padding: 0 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media(min-width: 1000px){
+    display: none;
+  }
+}
+.TopBox{
+  width: 100%;
+  
+  // background-image: url(../../assets/nft/123.png);
+}
+.titleBox{
+  font-size: 26px;
+  color: #ffe300;
+  font-weight: normal;
+  margin-bottom: 25px;
+  @media(max-width:1000px){
+    text-align: center;
+  }
+}
+.textBox{
+  max-width: 468px;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.86;
+  letter-spacing: normal;
+  color: #a0a0a8;
+  @media(max-width:1000px){
+    text-align: center;
+  }
+}
+.lingqu{
+  width: 280px;
+  height: 55px;
+  border-radius: 5px;
+  background-color: #ffe300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,83px);
+  @media(max-width:1000px){
+    display: none;
+  }
+}
+.lingqu:hover{
+  background-color: #ffe30070;
+}
+.Gift{
+  width: 50px;
+  margin: 0 15px 0 0;
+}
+
+.bordBox{
+  width: 100%;
+  margin-top: 115px;
+  padding: 0 77px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  @media(max-width:1000px){
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    // overflow-y: hidden;
+  }
+}
+.cord{
+  width: 440px;
+  height: 240px;
+  padding: 0 15px 0 0;
+  border-radius: 10px;
+  background-color: #323948;
+  display: flex;
+  align-items: center;
+  margin:15px;
+  @media(max-width:1000px){
+    width: 308px;
+    height: 170px;
+    margin: 10px;
+    margin-bottom: 15px;
+  }
+}
+.cordimg{
+  width: 200px;
+  height: 240px;
+  border-radius: 10px;
+  overflow: hidden;
+  @media(max-width:1000px){
+    width: 140px !important;
+    height: 170px !important;
+  }
+}
+.Entry1{
+  width: 210px;
+  height: 35px;
+  margin-bottom: 8px;
+  margin-left: 15px;
+  border-radius: 2.5px;
+  padding: 12px 12px 11px;
+  // background-color: #3b4353;
+  font-size: 18px;
+  @media(max-width:1000px){
+    width: 90%;
+    height: auto;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
+.Entry{
+  width: 210px;
+  height: 35px;
+  margin-bottom: 8px;
+  margin-left: 15px;
+  border-radius: 2.5px;
+  background-color: #3b4353;
+  padding: 12px 12px 11px;
+  font-family: PingFangSC;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.86;
+  letter-spacing: normal;
+  color: #a0a0a8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media(max-width:1000px){
+    width: 147px;
+    height: 25px;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+}
+.TopImgStyle{
+  max-height: 230px;
+  background-image: linear-gradient(to right, rgba(84, 102, 125, 0) 5%, #2a3647 76%);
+  @media(max-width:1000px){
+    max-height: auto;
+    max-width: 100%;
+  }
+
+}
+.lingqu2{
+  width: 280px;
+  height: 55px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #ffe300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  @media(min-width:1000px){
+    display: none;
+  }
+}
+.lingqu2:hover{
+  background-color: #ffe30070;
+}
+.pagingStyle{
+  @media(min-width:1000px){
+    display: none;
+  }
+  color: #a0a0a8;
+  margin: 20px 0;
+  width: 100%;
+  text-align: center;
+}
+
+// swiper样式
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  margin: 20px auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.append-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.append-buttons a {
+  display: inline-block;
+  border: 1px solid #007aff;
+  color: #007aff;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+.PCstyle{
+  @media(max-width:1000px){
+    display: none;
+  }
+}
+.YDstyle{
+  @media(min-width:1000px){
+    display: none;
+  }
+  .swiper-slide{
+    width: 320px;
+  }
+}
