@@ -1,1 +1,1 @@
-# XERXES DAO-frontend
+# XERXES DAO-frontend/smart contracts
